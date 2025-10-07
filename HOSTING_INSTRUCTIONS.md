@@ -1,4 +1,4 @@
-# 📦 Instrucciones para Publicar fastflix.app
+# 📦 Instrucciones para publicar fastflix.app
 
 ## Archivos Creados
 
