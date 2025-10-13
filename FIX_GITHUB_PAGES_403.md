@@ -5,7 +5,7 @@ Error 403 en GitHub Pages después de configurar dominio custom de Porkbun.
 
 ## Causas Principales
 
-### 1. DNS Records Incorrectos
+### 1. DNS Records Incorrectos --
 GitHub Pages requiere records específicos.
 
 ### 2. CNAME File Incorrecto/Faltante
