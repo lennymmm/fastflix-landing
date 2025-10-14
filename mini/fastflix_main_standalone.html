@@ -20,10 +20,11 @@
 
         .hero-section {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://img.freepik.com/premium-photo/dark-movie-theatre-interior_847423-3360.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.3), transparent),
+                radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.2), transparent),
+                linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,7 +41,27 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.8) 100%);
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.03) 2px,
+                    rgba(255, 255, 255, 0.03) 4px
+                );
+            animation: filmGrain 0.5s infinite;
+        }
+
+        .cinema-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(78, 205, 196, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px, 80px 80px, 30px 30px;
+            animation: float 6s ease-in-out infinite;
         }
 
         .hero-content {
@@ -55,10 +76,11 @@
             font-weight: 700;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
         .hero-subtitle {
@@ -79,6 +101,23 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
         }
 
         .cta-button:hover {
@@ -95,10 +134,11 @@
         .section {
             padding: 80px 0;
             background: #111;
+            position: relative;
         }
 
         .section:nth-child(even) {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d30 100%);
         }
 
         .section-title {
@@ -136,11 +176,28 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
@@ -148,6 +205,8 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             display: block;
+            position: relative;
+            z-index: 1;
         }
 
         .feature-title {
@@ -155,11 +214,15 @@
             margin-bottom: 1rem;
             color: white;
             font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
 
         .feature-description {
             color: #ccc;
             line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
 
         .platforms-section {
@@ -175,30 +238,79 @@
         }
 
         .platform-item {
-            background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             padding: 1rem;
             border-radius: 10px;
             color: white;
             font-weight: 500;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .platform-item:hover::before {
+            left: 100%;
         }
 
         .platform-item:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(78, 205, 196, 0.2));
             transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .streaming-logos {
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .streaming-logos img {
-            max-width: 100%;
-            height: auto;
+        .streaming-showcase {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .platform-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .logo-placeholder {
+            background: linear-gradient(45deg, #e50914, #ff0040);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-placeholder:nth-child(2) { background: linear-gradient(45deg, #00D4FF, #5F39FB); }
+        .logo-placeholder:nth-child(3) { background: linear-gradient(45deg, #113CCF, #0066CC); }
+        .logo-placeholder:nth-child(4) { background: linear-gradient(45deg, #7C3AED, #A855F7); }
+        .logo-placeholder:nth-child(5) { background: linear-gradient(45deg, #000000, #333333); }
+        .logo-placeholder:nth-child(6) { background: linear-gradient(45deg, #FF7A00, #FF9500); }
+        .logo-placeholder:nth-child(7) { background: linear-gradient(45deg, #ED145B, #F06292); }
+        .logo-placeholder:nth-child(8) { background: linear-gradient(45deg, #00C851, #00E676); }
+
+        .logo-placeholder:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .mockup-section {
@@ -220,10 +332,62 @@
             text-align: center;
         }
 
-        .mockup-image img {
-            max-width: 100%;
-            height: auto;
-            max-height: 500px;
+        .phone-mockup {
+            width: 250px;
+            height: 500px;
+            background: linear-gradient(145deg, #2c3e50, #34495e);
+            border-radius: 25px;
+            padding: 20px;
+            margin: 0 auto;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-interface {
+            color: white;
+            text-align: left;
+        }
+
+        .app-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .movie-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .movie-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .movie-platforms {
+            font-size: 0.7rem;
+            color: #4ecdc4;
         }
 
         .footer {
@@ -259,6 +423,25 @@
             }
         }
 
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(78, 205, 196, 0.8);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes filmGrain {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -280,12 +463,17 @@
             .platforms-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .platform-logos {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero-section">
+        <div class="cinema-dots"></div>
         <div class="hero-content">
             <h1 class="hero-title">🎬 FastFlix</h1>
             <p class="hero-subtitle">Encuentra películas y series en todas tus plataformas de streaming</p>
@@ -353,7 +541,25 @@
                     </div>
                 </div>
                 <div class="mockup-image">
-                    <img src="https://static.vecteezy.com/system/resources/previews/005/258/826/non_2x/video-streaming-platform-app-smartphone-interface-template-mobile-app-page-design-layout-group-party-movies-watching-service-screen-flat-ui-for-application-phone-display-vector.jpg" alt="FastFlix App Mockup">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="app-interface">
+                                <div class="app-header">🎬 FastFlix</div>
+                                <div class="movie-card">
+                                    <div class="movie-title">Stranger Things</div>
+                                    <div class="movie-platforms">Netflix • Prime Video</div>
+                                </div>
+                                <div class="movie-card">
+                                    <div class="movie-title">The Mandalorian</div>
+                                    <div class="movie-platforms">Disney+ • Exclusive</div>
+                                </div>
+                                <div class="movie-card">
+                                    <div class="movie-title">Dune</div>
+                                    <div class="movie-platforms">HBO Max • Prime Video</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -364,8 +570,18 @@
         <div class="container">
             <h2 class="section-title">Plataformas Compatibles</h2>
             
-            <div class="streaming-logos">
-                <img src="https://fabrikbrands.com/wp-content/uploads/Streaming-Service-Logos-1-1155x770.png" alt="Plataformas de Streaming Compatibles">
+            <div class="streaming-showcase">
+                <p style="color: #ccc; font-size: 1.1rem; margin-bottom: 2rem;">Integra todas tus plataformas favoritas en un solo lugar</p>
+                <div class="platform-logos">
+                    <div class="logo-placeholder">Netflix</div>
+                    <div class="logo-placeholder">Disney+</div>
+                    <div class="logo-placeholder">Prime Video</div>
+                    <div class="logo-placeholder">HBO Max</div>
+                    <div class="logo-placeholder">Apple TV+</div>
+                    <div class="logo-placeholder">Movistar+</div>
+                    <div class="logo-placeholder">Filmin</div>
+                    <div class="logo-placeholder">Rakuten TV</div>
+                </div>
             </div>
             
             <div class="platforms-grid">
@@ -386,8 +602,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="privacy.html">Política de Privacidad</a>
-                <a href="/cdn-cgi/l/email-protection#acdfd9dcdcc3ded8eccacddfd8cac0c5d482cddcdc">Contacto</a>
+                <a href="fastflix_privacy_standalone.html">Política de Privacidad</a>
+                <a href="/cdn-cgi/l/email-protection#20535550504f52546046415354464c49580e415050">Contacto</a>
             </div>
             <p>&copy; 2024 FastFlix. Todos los derechos reservados.</p>
         </div>
