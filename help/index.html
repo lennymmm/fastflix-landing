@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de Ayuda de FastFlix - Tu guía personalizada de streaming">
+    <meta name="keywords" content="FastFlix, ayuda, streaming, películas, series, Netflix, Prime Video">
+    <title>Ayuda - FastFlix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 4L20 8H17L15 4H13L15 8H12L10 4H8L10 8H7L5 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V4H18Z" fill="currentColor"/>
+                </svg>
+                <h1>FastFlix</h1>
+            </div>
+            <p class="hero-subtitle">Centro de Ayuda</p>
+            <p class="hero-description">Encuentra respuestas a tus preguntas</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar en la ayuda..." aria-label="Buscar">
+                <button id="searchButton" aria-label="Buscar">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Start Section -->
+    <section class="section quick-start">
+        <div class="container">
+            <h2 class="section-title">🚀 Guía Rápida</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <h3>¿Qué es FastFlix?</h3>
+                    <p>FastFlix es tu guía personalizada para descubrir dónde ver películas y series en tus plataformas de streaming favoritas. Encuentra contenido de Netflix, Prime Video, Disney+, HBO Max y más.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Cómo empezar</h3>
+                    <ol class="steps-list">
+                        <li>Selecciona tus plataformas de streaming</li>
+                        <li>Explora películas y series disponibles</li>
+                        <li>Agrega contenido a "Mi Lista"</li>
+                        <li>Marca lo que ya viste</li>
+                        <li>Dale like a lo que te gustó</li>
+                    </ol>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <h3>Características principales</h3>
+                    <ul class="features-list">
+                        <li>Filtrado por plataformas</li>
+                        <li>Listas personalizadas</li>
+                        <li>Sistema de likes</li>
+                        <li>Sincronización en la nube</li>
+                        <li>Información detallada de contenido</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">✨ Funcionalidades</h2>
+            
+            <div class="feature-item">
+                <div class="feature-icon">➕</div>
+                <div class="feature-content">
+                    <h3>Mi Lista</h3>
+                    <p>Agrega películas y series que quieres ver más tarde. Toca el botón <strong>+</strong> en cualquier contenido para agregarlo a tu lista personal. Cuando ya lo agregaste, verás un <strong>✓</strong> verde.</p>
+                    <div class="tip">
+                        <strong>💡 Consejo:</strong> Puedes filtrar para ver solo tu contenido favorito desde la pestaña "Mi FastFlix".
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">👁️</div>
+                <div class="feature-content">
+                    <h3>Ya visto</h3>
+                    <p>Marca el contenido que ya viste para no verlo repetido en tus recomendaciones. Toca el botón del <strong>ojo 👁️</strong> para marcarlo como visto.</p>
+                    <div class="tip">
+                        <strong>💡 Consejo:</strong> Activa "Ocultar contenido visto" en los filtros para limpiar tu vista.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">❤️</div>
+                <div class="feature-content">
+                    <h3>Me gusta</h3>
+                    <p>Dale like al contenido que te gustó. Esto ayuda a mejorar las recomendaciones y contribuye al <strong>FastFlix Score</strong>, una puntuación comunitaria que refleja la popularidad del contenido.</p>
+                    <div class="tip">
+                        <strong>💡 Consejo:</strong> El FastFlix Score se calcula con: (Likes × 3) + (En listas × 2) + (Vistas × 1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🔧</div>
+                <div class="feature-content">
+                    <h3>Mis Filtros</h3>
+                    <p>Personaliza tu experiencia seleccionando las plataformas de streaming que tienes. Solo verás contenido disponible en tus servicios.</p>
+                    <div class="tip">
+                        <strong>💡 Consejo:</strong> Accede a "Mis Filtros" desde el menú principal (☰) para cambiar tus plataformas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq">
+        <div class="container">
+            <h2 class="section-title">❓ Preguntas Frecuentes</h2>
+            
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Necesito crear una cuenta?</summary>
+                    <div class="faq-answer">
+                        <p>No, puedes usar FastFlix sin crear cuenta. La app funciona con una sesión anónima que guarda tus preferencias, listas y likes automáticamente en la nube.</p>
+                        <p>En el futuro podrás crear una cuenta para acceder a funcionalidades adicionales como perfil público, estadísticas avanzadas y seguir a otros usuarios.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo funciona la sincronización?</summary>
+                    <div class="faq-answer">
+                        <p>Tus listas, preferencias y likes se sincronizan automáticamente en la nube usando Supabase. Esto significa que:</p>
+                        <ul>
+                            <li>Tus datos están seguros y respaldados</li>
+                            <li>Puedes acceder desde cualquier dispositivo (próximamente)</li>
+                            <li>No necesitas preocuparte por perder tu información</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Dónde se guardan mis datos?</summary>
+                    <div class="faq-answer">
+                        <p>Tus datos se guardan de forma segura en Supabase, una plataforma de base de datos en la nube. Usamos una sesión anónima, por lo que no necesitas proporcionar información personal.</p>
+                        <p>Los datos incluyen: contenido en tu lista, contenido visto, likes, y preferencias de plataformas.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Es gratis FastFlix?</summary>
+                    <div class="faq-answer">
+                        <p>Sí, FastFlix es completamente gratis. Mostramos anuncios para mantener el servicio funcionando.</p>
+                        <p>En el futuro ofreceremos una versión premium sin anuncios con funcionalidades adicionales.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Puedo usar FastFlix sin internet?</summary>
+                    <div class="faq-answer">
+                        <p>Actualmente FastFlix requiere conexión a internet para funcionar, ya que consulta información actualizada de películas, series y plataformas de streaming.</p>
+                        <p>Estamos trabajando en un modo offline básico que te permitirá ver tu lista y contenido guardado sin conexión.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo se actualiza el contenido?</summary>
+                    <div class="faq-answer">
+                        <p>El catálogo de películas y series se actualiza regularmente desde TMDb (The Movie Database), una de las bases de datos de contenido más completas del mundo.</p>
+                        <p>La información de plataformas de streaming se actualiza periódicamente para reflejar la disponibilidad actual.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué plataformas de streaming soporta?</summary>
+                    <div class="faq-answer">
+                        <p>FastFlix soporta las principales plataformas de streaming:</p>
+                        <ul>
+                            <li>Netflix</li>
+                            <li>Amazon Prime Video</li>
+                            <li>Disney+</li>
+                            <li>HBO Max</li>
+                            <li>Apple TV+</li>
+                            <li>Movistar+</li>
+                            <li>Y más...</li>
+                        </ul>
+                        <p>Constantemente agregamos nuevas plataformas según la demanda de los usuarios.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Puedo cambiar el idioma de la app?</summary>
+                    <div class="faq-answer">
+                        <p>Actualmente FastFlix está disponible en español. Estamos trabajando en soporte multiidioma (inglés, portugués) que estará disponible en futuras actualizaciones.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo reporto un problema o sugiero una mejora?</summary>
+                    <div class="faq-answer">
+                        <p>Nos encantaría escuchar tus comentarios! Puedes contactarnos en:</p>
+                        <p><strong>Email:</strong> <a href="mailto:soporte@fastflix.app">soporte@fastflix.app</a></p>
+                        <p>También puedes acceder a "Contacto" desde el menú principal de la app.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer class="contact">
+        <div class="container">
+            <h2 class="section-title">📧 Contacto</h2>
+            <p class="contact-description">¿Necesitas ayuda adicional? ¿Tienes sugerencias?</p>
+            <a href="mailto:soporte@fastflix.app" class="contact-email">soporte@fastflix.app</a>
+            
+            <div class="footer-links">
+                <a href="/" class="footer-link">Inicio</a>
+                <span class="separator">•</span>
+                <a href="/terms" class="footer-link">Términos de Servicio</a>
+                <span class="separator">•</span>
+                <a href="/privacy" class="footer-link">Política de Privacidad</a>
+            </div>
+            
+            <p class="copyright">© 2025 FastFlix. Todos los derechos reservados.</p>
+            <p class="version">Versión 1.0.24</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
