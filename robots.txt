@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fastflix.app/sitemap.xml
