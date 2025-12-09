@@ -421,6 +421,8 @@ body {
     text-decoration: none;
     opacity: 0.8;
     transition: var(--transition);
+    padding: 8px 12px;
+    display: inline-block;
 }
 
 .footer-link:hover {
