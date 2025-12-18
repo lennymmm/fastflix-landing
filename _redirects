@@ -1,0 +1,20 @@
+http://fastflix.app/* https://fastflix.app/:splat 301!
+http://www.fastflix.app/* https://fastflix.app/:splat 301!
+https://www.fastflix.app/* https://fastflix.app/:splat 301!
+
+/en /en/ 301
+/help /help/ 301
+/terms /terms/ 301
+/privacy /privacy/ 301
+/blog /blog/ 301
+
+/en/help /en/help/ 301
+/en/terms /en/terms/ 301
+/en/privacy /en/privacy/ 301
+/en/blog /en/blog/ 301
+
+/en/blog/free-legal-movies-with-ads-fastflix /en/blog/free-legal-movies-with-ads-fastflix.html 301
+/en/blog/free-legal-movies-with-ads-fastflix/ /en/blog/free-legal-movies-with-ads-fastflix.html 301
+
+/blog/peliculas-gratis-legales-anuncios-fastflix /blog/peliculas-gratis-legales-anuncios-fastflix.html 301
+/blog/peliculas-gratis-legales-anuncios-fastflix/ /blog/peliculas-gratis-legales-anuncios-fastflix.html 301
