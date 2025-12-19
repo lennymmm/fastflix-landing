@@ -9,6 +9,7 @@
     <link rel="alternate" href="https://fastflix.app/en/" hreflang="en" />
     <link rel="alternate" href="https://fastflix.app/en/" hreflang="x-default" />    
     <link rel="canonical" href="https://fastflix.app/">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <style>
         * {
             margin: 0;
@@ -231,6 +232,14 @@
             max-height: 500px;
         }
 
+        .mockup-image iframe {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+            max-height: 500px;
+            border: 0;
+        }
+
         .footer {
             background: #000;
             color: white;
@@ -361,7 +370,13 @@
                     </div>
                 </div>
                 <div class="mockup-image">
-                    <img src="images/Fastflix-detalles3.jpeg" alt="FastFlix App Mockup">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/S7RGcgkzC0c?start=27&origin=https://fastflix.app"
+                        title="FastFlix how-to"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        loading="lazy"></iframe>
                 </div>
             </div>
         </div>
