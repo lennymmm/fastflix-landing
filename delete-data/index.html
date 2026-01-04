@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicita la eliminación de tus datos personales de FastFlix. Control total sobre tu información.">
+    <meta name="keywords" content="FastFlix, eliminación de datos, privacidad, GDPR, borrar cuenta">
+    <title>Eliminación de Datos - FastFlix</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .lang-switch {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .lang-switch a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .method {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .method h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .email-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .email-box strong {
+            color: #1976d2;
+            font-size: 1.2em;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning strong {
+            color: #856404;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .timeline {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            🌐 <strong>Español</strong> | <a href="../en/delete-data/">English</a>
+        </div>
+        
+        <div class="header">
+            <h1>🗑️ Eliminación de Datos</h1>
+            <p>FastFlix - Control total sobre tu información personal</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📋 Información General</h2>
+                <p>En FastFlix respetamos tu privacidad y tu derecho a controlar tus datos personales. Puedes solicitar la eliminación completa de tu cuenta y todos los datos asociados en cualquier momento.</p>
+                
+                <div class="info">
+                    <strong>📊 Datos que serán eliminados:</strong>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Dirección de correo electrónico</li>
+                        <li>Contraseña encriptada</li>
+                        <li>Listas personales (Mi Lista, Ya vistas)</li>
+                        <li>Preferencias de usuario</li>
+                        <li>Historial de uso</li>
+                        <li>Todos los datos asociados a tu cuenta</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔧 Métodos de Eliminación</h2>
+                
+                <div class="method">
+                    <h3>Opción 1: Desde la Aplicación (Recomendado)</h3>
+                    <ol class="steps">
+                        <li>Abre la aplicación FastFlix</li>
+                        <li>Ve a <strong>Configuración</strong> (ícono de engranaje)</li>
+                        <li>Selecciona <strong>Cuenta</strong></li>
+                        <li>Toca <strong>"Eliminar mi cuenta"</strong></li>
+                        <li>Confirma la eliminación cuando se te solicite</li>
+                    </ol>
+                    <div class="timeline">
+                        <strong>⏱️ Tiempo de procesamiento:</strong> Inmediato. Tu cuenta será desactivada al instante y los datos se eliminarán permanentemente en 30 días.
+                    </div>
+                </div>
+                
+                <div class="method">
+                    <h3>Opción 2: Por Correo Electrónico</h3>
+                    <p>Si no puedes acceder a la aplicación, envíanos un correo electrónico:</p>
+                    
+                    <div class="email-box">
+                        <strong>📧 Email:</strong> privacy@fastflix.app
+                    </div>
+                    
+                    <p><strong>Incluye en tu correo:</strong></p>
+                    <ol class="steps">
+                        <li><strong>Asunto:</strong> "Solicitud de eliminación de datos - FastFlix"</li>
+                        <li><strong>Email de tu cuenta:</strong> El correo electrónico que usaste para registrarte</li>
+                        <li><strong>Confirmación:</strong> Escribe "Confirmo que deseo eliminar mi cuenta y todos mis datos"</li>
+                    </ol>
+                    
+                    <div class="timeline">
+                        <strong>⏱️ Tiempo de respuesta:</strong> Responderemos en un máximo de 48 horas hábiles y procesaremos tu solicitud en 30 días.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚠️ Importante - Antes de Eliminar</h2>
+                
+                <div class="warning">
+                    <strong>⚠️ Esta acción es irreversible</strong>
+                    <p style="margin-top: 10px;">Una vez eliminada tu cuenta:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>No podrás recuperar tus listas personales</li>
+                        <li>Perderás todas tus preferencias guardadas</li>
+                        <li>No podrás acceder a tu cuenta Premium (si aplica)</li>
+                        <li>Tendrás que crear una nueva cuenta si deseas volver a usar FastFlix</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🕐 Línea de Tiempo</h2>
+                <ol class="steps">
+                    <li><strong>Solicitud recibida:</strong> Tu cuenta se marca para eliminación</li>
+                    <li><strong>Período de gracia (7 días):</strong> Puedes cancelar la eliminación contactándonos</li>
+                    <li><strong>Eliminación de datos (30 días):</strong> Todos tus datos se eliminan permanentemente de nuestros servidores</li>
+                    <li><strong>Confirmación:</strong> Recibirás un email confirmando la eliminación completa</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2>🔒 Datos que NO Eliminamos</h2>
+                <div class="info">
+                    <p>Por razones legales y de seguridad, podemos retener cierta información anónima:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Logs de transacciones (sin información personal identificable)</li>
+                        <li>Datos agregados y anónimos para estadísticas</li>
+                        <li>Información requerida por ley o regulaciones</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>Esta información no puede ser vinculada a tu identidad personal.</em></p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>❓ Preguntas Frecuentes</h2>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>¿Puedo cancelar la eliminación?</strong>
+                    <p>Sí, tienes 7 días para cancelar la solicitud contactándonos a privacy@fastflix.app</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>¿Qué pasa con mi suscripción Premium?</strong>
+                    <p>Si tienes una suscripción activa, será cancelada automáticamente. No se realizarán más cobros.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>¿Se eliminan también los datos de terceros (AdMob, etc.)?</strong>
+                    <p>Eliminamos todos los datos bajo nuestro control. Para datos de terceros (como AdMob), debes gestionar la eliminación directamente con ellos o usar las opciones de privacidad de tu dispositivo Android.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>¿Necesito proporcionar alguna verificación?</strong>
+                    <p>Por seguridad, podemos solicitarte que verifiques tu identidad respondiendo desde el email de tu cuenta o proporcionando información adicional.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📞 Contacto</h2>
+                <p>Si tienes preguntas sobre la eliminación de datos o nuestra política de privacidad:</p>
+                <div class="email-box">
+                    <strong>📧 Email:</strong> privacy@fastflix.app<br>
+                    <strong>🌐 Sitio web:</strong> <a href="https://fastflix.app" style="color: #1976d2;">fastflix.app</a><br>
+                    <strong>📄 Política de Privacidad:</strong> <a href="../privacy/" style="color: #1976d2;">Ver aquí</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>FastFlix</strong> - Miranda Solutions</p>
+            <p style="margin-top: 10px;">© 2025 Miranda Solutions. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px;">
+                <a href="../privacy/">Política de Privacidad</a> | 
+                <a href="../terms/">Términos de Servicio</a> |
+                <a href="../">Inicio</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
