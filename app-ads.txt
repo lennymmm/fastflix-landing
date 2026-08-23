@@ -1,4 +1,4 @@
 # app-ads.txt para FastFlix
 # Dominio: fastflix.app
 # Intercambio / SellerAccount / RELATIONSHIP / TAGID
-google.com, pub-5750725267052676, DIRECT, f08c47fec0942fa0
+google.com, pub-6840670234876596, DIRECT, f08c47fec0942fa0
