@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.fastflix",
+      "sha256_cert_fingerprints": [
+        "88:73:BE:F0:35:4C:D9:00:8C:C0:F4:F8:9D:B9:AA:D6:93:7E:54:57:78:2B:14:99:22:3D:70:E4:E7:D2:44:7C",
+        "F3:E0:AA:CA:50:DF:D2:8C:14:D9:CE:83:95:3B:10:35:DF:DB:DE:18:BD:39:8E:65:7A:B5:BF:3B:46:8F:DA:FB"
+      ]
+    }
+  }
+]

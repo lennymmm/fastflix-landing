@@ -18,3 +18,10 @@ https://www.fastflix.app/* https://fastflix.app/:splat 301!
 
 /blog/peliculas-gratis-legales-anuncios-fastflix /blog/peliculas-gratis-legales-anuncios-fastflix.html 301
 /blog/peliculas-gratis-legales-anuncios-fastflix/ /blog/peliculas-gratis-legales-anuncios-fastflix.html 301
+
+# Enlaces compartidos desde la app (App Links). Se sirven con 200 para que
+# la URL se conserve y la pagina /open pueda leer el tipo e id del path.
+/l/* /open/index.html 200
+/m/* /open/index.html 200
+/s/* /open/index.html 200
+/f/* /open/index.html 200
